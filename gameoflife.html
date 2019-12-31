@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel ="stylesheet" href = "style.css">
+    <title>Game of Life</title>
+</head>
+
+<body>
+    <p class="title">Game of life</p>
+
+    <section class="boxes" >
+        <div class = "box">
+            <h4>Grid Width</h4>
+            <input type="number" min="10" step="1" value="40" id="gridX" name="Grid Width" required minlength="1" maxlength="4" size="4"><br>
+        </div>
+        <div class = "box">
+            <h4>Grid Height</h4>
+            <input type="number" min="10" step="1" value="20" id="gridY" name="Grid Height" required minlength="1" maxlength="4" size="4"><br>
+        </div>
+        <div class = "box">
+            <h4>Cell Size [px]</h4>
+            <input type="number" min="5" step="1" value="20" id="sqrSize" name="Square Size" required minlength="1" maxlength="4" size="4"><br>
+        </div>
+        <div class = "box">
+            <h4>Iteration Time [ms]</h4>
+            <input type="number" min="1" step="1" value="100" id="iterTime" name="Iteration Time" required minlength="1" maxlength="5" size="4"><br>
+        </div>
+        <div class = "box">
+            <h4>Dead Cell Color</h4>
+            <input type="color" id="deadColor" name="Dead" value="#000000"><br>
+        </div>
+        <div class = "box">
+            <h4>Alive Cell Color</h4>
+            <input type="color" id="aliveColor" name="Alive" value="#04FF00"><br>
+        </div>
+        <div class = "box">
+            <h4>Toggle Grid</h4>
+            <input type="checkbox" id="gridToggle" checked = "true"> 
+        </div>
+        <div class = "box">
+            <h4>Toggle Paint/Erase</h4>
+            <button type="button" id="paintButton">Painting</button>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="buttons">
+        <button type="button" id="setupButton">Set parameters</button>
+        <button type="button" id="startButton">Start simulation</button>
+    </section>
+
+    <br>
+
+    <canvas id="gameScreen", width="500", height="300" ></canvas>
+    <script src= 'game.js'></script>
+</body>
+</html>
